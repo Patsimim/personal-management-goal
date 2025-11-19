@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  Home,
   DollarSign,
   Dumbbell,
   BookOpen,
@@ -12,10 +13,11 @@ import {
 } from "lucide-react";
 
 const menuItems = [
+  { name: "Home", icon: Home, path: "/" },
   { name: "Finances", icon: DollarSign, path: "/finances" },
   { name: "Fitness", icon: Dumbbell, path: "/fitness" },
   { name: "Learning", icon: BookOpen, path: "/learning" },
-  { name: "Wellbeing", icon: Heart, path: "/wellbeing" },
+  { name: "Journal", icon: Heart, path: "/journal" },
   { name: "Goals", icon: Target, path: "/goals" },
   { name: "Settings", icon: Settings, path: "/settings" },
 ];
@@ -25,8 +27,8 @@ export default function Sidebar() {
 
   return (
     <aside className='w-60 bg-white border-l border-gray-200 flex flex-col'>
-      <nav className='flex-1 px-4 py-6 pt-8'>
-        <ul className='space-y-2 w-full'>
+      <nav className='flex-1 px-4 py-6'>
+        <ul className='space-y-2'>
           {menuItems.map((item) => {
             const Icon = item.icon;
             const isActive =
@@ -38,8 +40,8 @@ export default function Sidebar() {
                   href={item.path}
                   className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                     isActive
-                      ? "bg-secondary text-foreground shadow-sm"
-                      : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                      ? "bg-white text-gray-900 shadow-sm border border-gray-200"
+                      : "text-gray-600 hover:bg-white hover:text-gray-900"
                   }`}
                 >
                   <Icon className='w-5 h-5' />
