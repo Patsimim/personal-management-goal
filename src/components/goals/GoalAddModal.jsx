@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { X, Loader2 } from "lucide-react";
 import useGoalStore from "@/stores/goalStore";
@@ -345,7 +347,7 @@ export default function AddGoalModal({ isOpen, onClose }) {
           <button
             onClick={handleSave}
             disabled={loading}
-            className='w-full bg-gray-800 text-white font-semibold py-3 rounded-lg hover:bg-gray-900 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center'
+            className='w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center'
           >
             {loading ? (
               <>

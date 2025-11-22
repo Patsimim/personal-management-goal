@@ -61,7 +61,7 @@ export default function GoalsPage() {
         {/* Add Goal Button */}
         <button
           onClick={() => setIsModalOpen(true)}
-          className='mb-6 flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-800 text-gray-800 rounded-lg hover:bg-gray-50 transition-colors font-medium'
+          className='mb-6 flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium'
         >
           <Plus className='w-5 h-5' />
           ADD GOAL

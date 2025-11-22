@@ -50,7 +50,7 @@ export default function RightPanel() {
           />
           <button
             onClick={addNote}
-            className='w-full bg-blue-500 text-white font-medium py-2 rounded-lg hover:bg-blue-600 transition-colors'
+            className='w-full bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-blue-700 transition-colors'
           >
             Add Note
           </button>
